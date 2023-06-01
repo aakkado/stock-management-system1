@@ -1,0 +1,45 @@
+.header {
+    background-color: #f7eadc;
+    height: 96px;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    line-height: 50px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background-color: #000;
+    position: absolute;
+    top: 4px;
+    right: 16px;
+    border-radius: 50%;
+}
+
+.sidebar {
+    width: 160px;
+    height: calc(100vh - 96px);
+    background-color: #c1d9cd;
+    text-align: center;
+    color: #4d3b36;
+    position: fixed;
+    top: 96px; /* Ajuste para que a sidebar comece abaixo da faixa de cabeçalho */
+    left: 0;
+}
+
+.sidebar-item {
+    margin-top: 16px;
+    font-family: Arial, sans-serif; /* Exemplo de fonte sans-serif */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: 400; /* Peso normal da fonte */
+    letter-spacing: 0.5px; /* Espaçamento entre as letras */
+}
+
+body {
+    margin: 0;
+}
