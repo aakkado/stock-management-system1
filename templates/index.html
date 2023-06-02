@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://kit.fontawesome.com/2e1a73f3fe.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="static/styles.css">
     <title>gerenciamento de recursos</title>
   </head>
   <body>
     <div class="main">
       <div class="side-bar">
-        <div class="icon-frame"><span>login</span></div>
+        <div class="icon-frame">
+          <i class="fa-solid fa-user"></i>
+          <span class="icon-frame-text">login</span>
+        </div>
+        <div class="navigation">
+          <span>Estoque</span>
+          <span>Funcionários</span>
+          <span>Calendário</span>
+        </div>
+        <div class="extras">
+          <span><i class="fa-solid fa-headset"></i> Suporte</span>
+          <span><i class="fa-solid fa-gear"></i> Opções</span>
+        </div>
       </div>
     </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
   </body>
 </html>
