@@ -1,20 +1,19 @@
 from flask_sqlalchemy import SQLAlchemy
 
-db = SQLAlchemy()
-
 class Conexao:
     def __init__(self, app):
         self.app = app
+        self.db = SQLAlchemy(app)
         
     def conectar(self):
         parametros = self._ler_parametros_conexao()
         
         self.app.config['SQLALCHEMY_DATABASE_URI'] = parametros['DATABASE_URI']
         self.app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-        db.init_app(self.app)
+        self.db.init_app(self.app)
     
     def obter_sessao(self):
-        return db.session
+        return self.db.session
     
     def _ler_parametros_conexao(self):
         parametros = {}
@@ -27,3 +26,7 @@ class Conexao:
                 parametros[chave] = valor
     
         return parametros
+    
+    def fechar_conexao(self):
+        self.db.session.remove()
+        self.db.engine.dispose()

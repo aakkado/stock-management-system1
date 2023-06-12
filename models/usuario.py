@@ -1,11 +1,16 @@
-class Usuario:
-    def __init__(self, nome, senha, email):
+import bcrypt
+
+class User:
+    def __init__(self, nome, email, senha):
         self.nome = nome
-        self.senha = senha
         self.email = email
-        
-    def verificar_login(self, email_usuario, senha_usuario):
-        return self.email == email_usuario and self.senha == senha_usuario
-    
-    def obter_informacoes(self):
-        return f"Nome: {self.nome}, Email: {self.email}"
+        self.senha = self._criptografar_senha(senha)
+
+    def _criptografar_senha(self, senha):
+        salt = bcrypt.gensalt()
+        senha_hash = bcrypt.hashpw(senha.encode('utf-8'), salt)
+        return senha_hash.decode('utf-8')
+
+    def verificar_senha(self, senha):
+        senha_hash = self.senha.encode('utf-8')
+        return bcrypt.checkpw(senha.encode('utf-8'), senha_hash)

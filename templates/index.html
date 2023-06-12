@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/2e1a73f3fe.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,10 +12,10 @@
   <body>
     <div class="main">
       <div class="side-bar">
-        <div class="icon-frame">
+        <a class="icon-frame" href="{{ url_for('login') }}">
           <i class="fa-solid fa-user"></i>
           <span class="icon-frame-text">login</span>
-        </div>
+        </a>
         <div class="navigation">
           <span>Estoque</span>
           <span>Funcionários</span>
