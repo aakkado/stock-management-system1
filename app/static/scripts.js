@@ -14,4 +14,3 @@ elementos.forEach(function(elemento) {
       this.classList.add('cor-clicado');
     });
   });
-  

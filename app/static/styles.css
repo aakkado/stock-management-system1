@@ -29,7 +29,14 @@ body {
     border-radius: 36px;
 }
 
-.icon-frame {
+.main, .login, form{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-frame{
     background-color: #ffffff;
     border-radius: 96px;
     width: 64px;
@@ -46,7 +53,6 @@ body {
     font-size: 24px;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    text-decoration: none;
 }
 
 .side-bar {
@@ -97,4 +103,64 @@ span {
 .navigation span,
 .extras span {
   cursor: pointer;
+}
+
+.login {
+    height: 100%;
+    background-color: #f5f5f5;
+    width: 48%;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #362A5C;
+    width: 90%;
+    
+}
+
+form{
+    width: 100%;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: #2b2b48;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+input, button[type="submit"] {
+    height: 32px;
+    border-radius: 8px;
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+button[type="submit"] {
+    border: none;
+    background-color: #bebbc2;
+    color: #2b2248;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;    
+}
+
+button[type="submit"]:hover {
+    background-color: #dbd7e0;;
+
+}
+
+input::placeholder {
+    color: #c2bfca;
+}
+
+input {
+    padding: 0 8px;
+    color: #362A5C;
+    font-family: 'Ubuntu', sans-serif;
 }

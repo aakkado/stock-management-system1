@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <script src="https://kit.fontawesome.com/2e1a73f3fe.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="static/styles.css">
-    <title>Login</title>
-</head>
-<body>
-    <div class="main"></div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://kit.fontawesome.com/2e1a73f3fe.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="static/styles.css">
+        <title>login</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="login">
+                <form action="/login" method="POST">
+                    <div class="form-box">
+                      <label for="username">Username:</label>
+                      <input type="text" id="username" name="username" required placeholder="Your email address" autocomplete="off">
+                    </div>
+                    <div class="form-box">
+                      <label for="password">Password:</label>
+                      <input type="password" id="password" name="password" required placeholder="Your password">
+                    </div>
+                    <div class="form-box">
+                        <button type="submit">Sign in</button>
+                    </div>
+                    <a href="#signup">Don't have an account? Sign up</a>
+                  </form>
+            </div>
+        </div>
+    </body>
 </html>
